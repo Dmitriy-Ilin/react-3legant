@@ -1,0 +1,34 @@
+.tagline {
+    position: relative;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: $neutral;
+    color: $white;
+
+    a {
+        color: $yellow;
+    }
+}
+
+.tagline__desc {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.tagline__link {
+    font-weight: 500;
+    line-height: 22px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    border-bottom: 1px solid $yellow;
+}
+
+.tagline__close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+}

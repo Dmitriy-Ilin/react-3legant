@@ -1,0 +1,48 @@
+.nav {
+    padding: 16px 0;
+    background-color: $nav;
+}
+
+.nav__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    color: $neutral;
+}
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-family: 'Space Grotesk';
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav__btns {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav__btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav__btn-count {
+    padding: 5px 6px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 10px;
+    color: $nav;
+    background-color: $neutral;
+    border-radius: 50%;
+}

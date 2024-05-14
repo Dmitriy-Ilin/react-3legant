@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap");
+
+body {
+  font-family: $font-main;
+  color: $text-color;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1184px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.btn {
+  padding: 12px 56px;
+  display: inline-block;
+  border-radius: 8px;
+  color: $white;
+  background-color: $neutral;
+  transition: all 0.2s ease-in;
+
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  line-height: 32px;
+
+  &--small {
+    padding: 8px 40px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+  }
+
+  &--wide {
+    width: 100%;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.headline-4 {
+  color: $text-color;
+  font-family: 'Poppins';
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.4px;
+}
+
+.container-right {
+  padding-left: calc((100% - 1184px) / 2 + 32px);
+
+  @media (max-width: $laptop) {
+    padding-left: 32px;
+  }
+}

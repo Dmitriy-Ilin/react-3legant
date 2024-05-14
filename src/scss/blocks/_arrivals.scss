@@ -1,0 +1,52 @@
+.arrivals {
+    padding-top: 48px;
+}
+
+.arrivals__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrivals__dots {
+    margin-left: auto;
+}
+
+.dots {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    &::before {
+        display: block;
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $text-logo;
+    }
+
+    &--active {
+        border: 1px solid $neutral;
+        
+        &::before {
+            background-color: $neutral;
+        }
+    }
+}
+
+.arrivals__slider {
+    margin-top: 48px;
+    display: flex;
+    gap: 24px;
+}
