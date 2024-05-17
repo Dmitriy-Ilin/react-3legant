@@ -5,15 +5,9 @@ import 'swiper/css/pagination';
 import mock from 'src/mockData/data.json';
 import Loading from 'src/components/Loading';
 import { Pagination } from 'swiper/modules';
-const ArrivalsItem = lazy(() => import('src/components/ArrivalsItem'));
+const CardItem = lazy(() => import('src/components/CardItem'));
 
 const Arrivals = () => {
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index: number, className: string) {
-      return '<div class="' + className + '">' + '</div>';
-    },
-  };
 
   return (
     <section className='arrivals'>
@@ -23,16 +17,11 @@ const Arrivals = () => {
             <h2 className='headline-4'>New Arrivals</h2>
           </div>
           <div className='arrivals__dots'>
-            <div className='dots'>
-              {/* <div className='dot dot--active'></div>
-              <div className='dot'></div>
-              <div className='dot'></div> */}
-            </div>
+            <div className='dots'></div>
           </div>
         </div>
       </div>
       <div className='container-right'>
-        {/* <ArrivalsList /> */}
         <div className='arrivals__slider'>
           <Swiper
             slidesPerView={'auto'}
@@ -48,12 +37,12 @@ const Arrivals = () => {
             loop={true}
           >
             {mock.data.map((item) => 
-              // item.id <= 5 && 
-              <SwiperSlide key={item.id} style={{maxWidth: 262}}>
+              item.id <= 6 &&
+              <SwiperSlide key={item.id}>
                 <Suspense fallback={<Loading />}>
-                  <ArrivalsItem {...item}/>
+                  <CardItem {...item}/>
                 </Suspense> 
-              </SwiperSlide>    
+              </SwiperSlide> 
             )}
           </Swiper>
         </div>

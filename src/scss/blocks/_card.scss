@@ -1,10 +1,10 @@
 .card {
+    height: 100%;
     position: relative;
-
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 12px;
-    width: 262px;
-
+  
     &:hover {
         .card__btn {
             transform: translateY(0%);
@@ -31,7 +31,9 @@
 
 .card__picture {
     position: relative;
-    max-height: 349px;
+    width: 100%;
+    text-align: center;
+    background-color: #f3f5f7;
 }
 
 .card__new {
@@ -71,7 +73,9 @@
 }
 
 .card__desc {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     gap: 4px;
 }
 

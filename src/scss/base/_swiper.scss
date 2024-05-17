@@ -3,10 +3,9 @@
     height: 100%;
 }
 
-.swiper-pagination {
-    display: flex;
-    align-items: center;
-    gap: 8px
+.swiper-slide {
+    max-width: 262px;
+    height: 452px !important;
 }
 
 .swiper-custom-bullet {

@@ -45,6 +45,13 @@
     }
 }
 
+.arrivals__item {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .arrivals__slider {
     margin-top: 48px;
     display: flex;
