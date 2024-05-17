@@ -10,11 +10,12 @@
 }
 
 .promotion__desc {
-
+    display: grid;
+    gap: 24px;
 }
 
 .promotion__tagline {
-
+    margin-top: 100px;
 }
 
 .promotion__title {
@@ -26,7 +27,8 @@
 }
 
 .promotion__timer {
-
+    display: grid;
+    gap: 12px;
 }
 
 .promotion__expires {
