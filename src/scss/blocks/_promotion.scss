@@ -1,44 +1,79 @@
 .promotion {
-    margin-top: 100px;
-    background-color: rgba($yellow, 0.4);
-    display: grid;
-    gap: 24px;
+  position: relative;
+  margin-top: 100px;
+  background-color: rgba($yellow, 0.4);
+  display: grid;
+  gap: 24px;
+
+  &::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("src/assets/main2.jpeg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.promotion__container {
+  padding-left: calc((100% - 1184px) / 2 + (1184px / 2));
+  padding-right: calc((100% - 1184px) / 2);
 }
 
 .promotion__content {
- 
+  padding: 100px 0;
+  padding-left: 72px;
 }
 
 .promotion__desc {
-    display: grid;
-    gap: 24px;
+  display: grid;
+  gap: 24px;
 }
 
 .promotion__tagline {
-    margin-top: 100px;
+  color: $blue;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0%;
 }
 
 .promotion__title {
-
+  color: $text-accent;
+  font-family: "Poppins";
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 44px;
 }
 
 .promotion__text {
-
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
 }
 
 .promotion__timer {
-    display: grid;
-    gap: 12px;
+  display: grid;
+  gap: 12px;
 }
 
 .promotion__expires {
-
+  margin-top: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
 }
 
 .timer {
-    
 }
 
 .promotion__btn {
-    
+  margin-top: 24px;
+  color: $white;
 }

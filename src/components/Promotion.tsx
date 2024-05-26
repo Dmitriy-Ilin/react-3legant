@@ -1,9 +1,9 @@
-
+import Timer from "./Timer";
 
 const Promotion = () => {
   return (
     <section className='promotion'>
-      <div className='container'>
+      <div className='promotion__container'>
         <div className='promotion__content'>
           <div className='promotion__desc'>
             <p className='promotion__tagline'>PROMOTION</p>
@@ -14,10 +14,10 @@ const Promotion = () => {
           </div>
           <div className='promotion__timer'>
             <p className='promotion__expires'>Offer expires in:</p>
-            <div className='timer'>time</div>
+            <Timer />
           </div>
           <div className='promotion__btn'>
-            <a href=''>Shop now</a>
+            <a href='' className='btn btn--small'>Shop now</a>
           </div>
         </div>
       </div>

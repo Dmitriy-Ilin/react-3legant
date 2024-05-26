@@ -1,0 +1,28 @@
+.timer {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.timer__el {
+    text-align: center;
+}
+
+.timer__value {
+    padding: 10px;
+    background-color: $white;
+    color: $neutral;
+    font-family: 'Poppins';
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: -0.6px;
+}
+
+.timer__desc {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+}
+
