@@ -1,4 +1,4 @@
-import Timer from "./Timer";
+import Timer from 'src/components/Timer';
 
 const Promotion = () => {
   return (

@@ -1,13 +1,25 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/css/pagination';
-import mock from 'src/mockData/data.json';
+// import mock from 'src/mockData/data.json';
 import Loading from 'src/components/Loading';
 import { Pagination } from 'swiper/modules';
+import { Card } from 'src/types/cardType';
 const CardItem = lazy(() => import('src/components/CardItem'));
 
 const Arrivals = () => {
+  const [cardItem, setCardItem] = useState<Card[]>([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await fetch('http://localhost:3000/data');
+      const json = await data.json();
+      setCardItem(json);
+    };
+
+    getData();
+  }, []);
 
   return (
     <section className='arrivals'>
@@ -36,7 +48,7 @@ const Arrivals = () => {
             modules={[Pagination]}
             loop={true}
           >
-            {mock.data.map((item) => 
+            {cardItem.map((item) => 
               item.id <= 6 &&
               <SwiperSlide key={item.id}>
                 <Suspense fallback={<Loading />}>

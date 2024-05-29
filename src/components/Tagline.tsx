@@ -11,19 +11,19 @@ const Tagline = () => {
       {!isClose ? (
         <>
           <div className='tagline'>
-            <img className='tagline__icon' src={ticket} alt='icon' />
+            <img className='tagline__icon' src={ticket} alt='icon' loading='lazy'/>
             <div className='tagline__desc'>
               30% off storewide — Limited time!
             </div>
             <a className='tagline__link' href='#!'>
               Shop Now
-              <img src={arrowRight} alt='arrow-right' />
+              <img src={arrowRight} alt='arrow-right' loading='lazy'/>
             </a>
             <button 
               onClick={() => setIsClose(true)}
               className='tagline__close'
             >
-              <img src={close} alt='close'/>
+              <img src={close} alt='close' loading='lazy'/>
             </button>
           </div>
         </>

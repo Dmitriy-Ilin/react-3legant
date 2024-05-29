@@ -1,23 +1,16 @@
 import React from 'react';
 import star from 'src/assets/star.svg';
+import { Card } from 'src/types/cardType';
 
-type CardItem = {
-  id: number;
-  rating: number[];
-  description: string;
-  img: string;
-  price: number;
-};
-
-const CardItem: React.FC<CardItem> = (item) => {
-  const avg = Math.floor(item.rating.reduce((acc: number, sum: number) => acc + sum, 0) / item.rating.length);
+const CardItem: React.FC<Card> = (cardItem) => {
+  const avg = Math.floor(cardItem.rating.reduce((acc: number, sum: number) => acc + sum, 0) / cardItem.rating.length);
   const [isFavActive, setIsFavActive] = React.useState(false);
 
   return (
     <>
       <article className='card'>
         <div className='card__picture'>
-          <img src={item.img} alt='headphones' loading='lazy' />
+          <img src={cardItem.img} alt='headphones' loading='lazy' />
           <div className='card__new'>New</div>
           <div className='card__fav'>
             <button className={`btn-fav ${isFavActive ? 'btn-fav--active' : ''} `} onClick={() => setIsFavActive(!isFavActive)}>
@@ -33,7 +26,7 @@ const CardItem: React.FC<CardItem> = (item) => {
         </div>
         <div className='card__desc'>
           <div className='card__rating'>
-            {item.rating.map((_, index) => {
+            {cardItem.rating.map((_, index) => {
               if (index < avg) {
                 return (
                   <img key={index} src={star} alt='rating' loading='lazy'/>
@@ -41,8 +34,8 @@ const CardItem: React.FC<CardItem> = (item) => {
               }
             })}
           </div>
-          <div className='card__title'>{item.description}</div>
-          <div className='card__price'>${item.price}</div>
+          <div className='card__title'>{cardItem.description}</div>
+          <div className='card__price'>${cardItem.price}</div>
         </div>
         <a href='#!' className='card__link'></a>
       </article>

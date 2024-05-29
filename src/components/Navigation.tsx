@@ -21,7 +21,7 @@ const Navigation = () => {
               <li className='nav__item'>
                 <button className='nav__link'>
                   Shop
-                  <img src={arrowDown} alt='arrow-down' />
+                  <img src={arrowDown} alt='arrow-down' loading='lazy'/>
                 </button>
               </li>
               <li className='nav__item'>

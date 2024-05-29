@@ -23,7 +23,7 @@ const Collection = () => {
           <div className='plate'>
             <div className='plate__content'>
               <h3 className='plate__title'>Accessories</h3>
-              <a href='#!' className='plate__link'>Collection <img src={arrowRight} alt='arrow-right'/></a>
+              <a href='#!' className='plate__link'>Collection <img src={arrowRight} alt='arrow-right' loading='lazy'/></a>
             </div> 
           </div>
         </div>

@@ -9,7 +9,11 @@
 }
 
 .timer__value {
-    padding: 10px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: $white;
     color: $neutral;
     font-family: 'Poppins';
@@ -26,3 +30,7 @@
     letter-spacing: 0px;
 }
 
+.expired__notice {
+    text-align: center;
+    font-size: 40px;
+}

@@ -1,0 +1,50 @@
+.feed {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.feed__subtitle {
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: $text-logo;
+}
+
+.feed__title {
+    margin-top: 16px;
+    font-family: 'Poppins';
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.4px;
+    color: $text-accent;
+}
+
+.feed__undertitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    color: $text-accent;
+}
+
+.feed__link {
+    display: inline-block;
+    margin-top: 16px;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0px;
+    color: #6C7275 !important;
+}
+
+.feed__row {
+    margin-top: 40px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
+    gap: 24px;
+}
