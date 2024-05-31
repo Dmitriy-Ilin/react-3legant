@@ -51,6 +51,14 @@
     font-weight: 400;
     line-height: 22px;
     letter-spacing: 0px;
+
+    li > a {
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            color: #beb9b9;
+        }
+    }
 }
 
 .footer__row--border {

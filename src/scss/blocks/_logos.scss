@@ -3,7 +3,10 @@
 }
 
 .logos-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(162px, 1fr));
+    justify-content: center;
+    justify-items: center;
     align-items: center;
     gap: 24px;
 }

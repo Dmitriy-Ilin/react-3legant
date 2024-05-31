@@ -1,20 +1,20 @@
-// import mock from 'src/mockData/data.json';
+import mock from 'src/mockData/data.json';
 import { useEffect, useState } from 'react';
 import { Card } from 'src/types/cardType';
 import CardItem from 'src/components/CardItem';
 
 const BestSeller = () => {
-  const [cardItem, setCardItem] = useState<Card[]>([]);
+  // const [cardItem, setCardItem] = useState<Card[]>([]);
 
-  useEffect(() => {
-    const getData = async () => {
-      const data = await fetch('http://localhost:3000/data');
-      const json = await data.json();
-      setCardItem(json);
-    };
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const data = await fetch('http://localhost:3000/data');
+  //     const json = await data.json();
+  //     setCardItem(json);
+  //   };
 
-    getData();
-  }, []);
+  //   getData();
+  // }, []);
 
   return (
     <section className='bestseller'>
@@ -23,7 +23,7 @@ const BestSeller = () => {
           <h2 className='headline-4'>Best Seller</h2>
         </div>
         <div className='bestseller__cards'>
-          {cardItem.map((item, index) => {
+          {mock.data.map((item, index) => {
             if (index < 8) {
               return (
                 <CardItem key={item.id} {...item}/>

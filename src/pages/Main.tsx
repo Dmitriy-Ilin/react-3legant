@@ -25,9 +25,9 @@ const Main = () => {
       <Suspense fallback={<Loading />}>
         <Hero />
       </Suspense>
-      {/* <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />}>
         <Logos />
-      </Suspense> */}
+      </Suspense>
       <Suspense fallback={<Loading />}>
         <Arrivals />
       </Suspense>
