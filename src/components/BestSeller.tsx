@@ -1,5 +1,5 @@
-import mock from 'src/mockData/data.json';
 import CardItem from 'src/components/CardItem';
+import { data } from 'src/mockData/data';
 
 const BestSeller = () => {
   // const [cardItem, setCardItem] = useState<Card[]>([]);
@@ -21,7 +21,7 @@ const BestSeller = () => {
           <h2 className='headline-4'>Best Seller</h2>
         </div>
         <div className='bestseller__cards'>
-          {mock.data.map((item, index) => {
+          {data.map((item, index) => {
             if (index < 8) {
               return <CardItem key={item.id} {...item} />;
             }

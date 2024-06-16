@@ -2,9 +2,9 @@ import { Suspense, lazy } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/css/pagination';
-import mock from 'src/mockData/data.json';
 import Loading from 'src/components/Loading';
 import { Pagination } from 'swiper/modules';
+import { data } from 'src/mockData/data';
 const CardItem = lazy(() => import('src/components/CardItem'));
 
 const Arrivals = () => {
@@ -52,7 +52,7 @@ const Arrivals = () => {
               },
             }}
           >
-            {mock.data.map(
+            {data.map(
               (item) =>
                 item.id <= 6 && (
                   <SwiperSlide key={item.id}>
