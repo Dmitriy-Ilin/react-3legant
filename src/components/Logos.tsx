@@ -10,12 +10,12 @@ const Logos = () => {
     <article className='logos'>
       <div className='container'>
         <div className='logos-row'>
-          <img src={logo1} alt='logo-1' loading='lazy'/>
-          <img src={logo2} alt='logo-2' loading='lazy'/>
-          <img src={logo3} alt='logo-3' loading='lazy'/>
-          <img src={logo4} alt='logo-4' loading='lazy'/>
-          <img src={logo5} alt='logo-5' loading='lazy'/>
-          <img src={logo6} alt='logo-6' loading='lazy'/>
+          <img src={logo1} alt='logo-1' loading='lazy' />
+          <img src={logo2} alt='logo-2' loading='lazy' />
+          <img src={logo3} alt='logo-3' loading='lazy' />
+          <img src={logo4} alt='logo-4' loading='lazy' />
+          <img src={logo5} alt='logo-5' loading='lazy' />
+          <img src={logo6} alt='logo-6' loading='lazy' />
         </div>
       </div>
     </article>

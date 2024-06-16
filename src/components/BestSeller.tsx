@@ -1,6 +1,4 @@
 import mock from 'src/mockData/data.json';
-import { useEffect, useState } from 'react';
-import { Card } from 'src/types/cardType';
 import CardItem from 'src/components/CardItem';
 
 const BestSeller = () => {
