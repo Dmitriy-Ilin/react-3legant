@@ -9,5 +9,5 @@ export default defineConfig({
       src: '/src',
     },
   },
-  base: 'react-elegant-ecommerce',
+  base: 'react-3legant',
 });
