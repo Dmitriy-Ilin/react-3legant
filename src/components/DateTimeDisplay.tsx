@@ -3,7 +3,7 @@ import React from 'react';
 type DateTimerDisplay = {
   value: number;
   type: string;
-}
+};
 
 const DateTimeDisplay: React.FC<DateTimerDisplay> = ({ value, type }) => {
   return (
@@ -13,5 +13,5 @@ const DateTimeDisplay: React.FC<DateTimerDisplay> = ({ value, type }) => {
     </div>
   );
 };
-  
+
 export default DateTimeDisplay;

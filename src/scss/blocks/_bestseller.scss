@@ -1,10 +1,37 @@
 .bestseller {
-    margin-top: 48px;
+  margin-top: 48px;
+}
+
+.bestseller__title {
+  @include mediaTablet {
+    text-align: center;
+  }
 }
 
 .bestseller__cards {
-    margin-top: 48px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
-    gap: 48px 24px;
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
+  gap: 48px 24px;
+
+  @include mediaTablet {
+    margin-top: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(151px, 1fr));
+    gap: 10px 8px;
+
+    .card__desc {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .card__title {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      text-wrap: nowrap;
+    }
+
+    .card__btn {
+      display: none;
+    }
+  }
 }

@@ -8,8 +8,8 @@ const Timer = () => {
 
   return (
     <>
-      <div className='timer'>  
-        <CountdownTimer targetDate={dateTimeAfterThreeDays} /> 
+      <div className='timer'>
+        <CountdownTimer targetDate={dateTimeAfterThreeDays} />
       </div>
     </>
   );

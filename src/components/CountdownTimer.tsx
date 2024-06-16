@@ -5,7 +5,7 @@ import ShowCounter from 'src/components/ShowCounter';
 
 type CountdownTimer = {
   targetDate: number;
-}
+};
 
 const CountdownTimer: React.FC<CountdownTimer> = ({ targetDate }) => {
   const [days, hours, minutes, seconds] = useCountdown(targetDate);

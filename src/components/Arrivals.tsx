@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useState } from 'react';
+import { Suspense, lazy, memo, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/css/pagination';
@@ -37,7 +37,7 @@ const Arrivals = () => {
         <div className='arrivals__slider'>
           <Swiper
             slidesPerView={'auto'}
-            spaceBetween={24}
+            spaceBetween={16}
             pagination={{
               el: '.dots',
               type: 'bullets',
@@ -45,16 +45,23 @@ const Arrivals = () => {
               bulletActiveClass: 'swiper-custom-bullet-active',
               clickable: true,
             }}
-            modules={[Pagination]}
             loop={true}
+            modules={[Pagination]}
+            breakpoints={{
+              820: {
+                spaceBetween: 24,
+              },
+            }}
           >
-            {mock.data.map((item) => 
-              item.id <= 6 &&
-              <SwiperSlide key={item.id}>
-                <Suspense fallback={<Loading />}>
-                  <CardItem {...item}/>
-                </Suspense> 
-              </SwiperSlide> 
+            {mock.data.map(
+              (item) =>
+                item.id <= 6 && (
+                  <SwiperSlide key={item.id}>
+                    <Suspense fallback={<Loading />}>
+                      <CardItem {...item} />
+                    </Suspense>
+                  </SwiperSlide>
+                ),
             )}
           </Swiper>
         </div>

@@ -25,9 +25,7 @@ const BestSeller = () => {
         <div className='bestseller__cards'>
           {mock.data.map((item, index) => {
             if (index < 8) {
-              return (
-                <CardItem key={item.id} {...item}/>
-              );
+              return <CardItem key={item.id} {...item} />;
             }
           })}
         </div>

@@ -1,5 +1,9 @@
 .collection {
   margin-top: 48px;
+
+  @include mediaTablet {
+    margin-top: 40px;
+  }
 }
 
 .collection__grid {
@@ -7,58 +11,87 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-//   grid-template-areas:
-//     "a b"
-//     "a c";
+
+  @include mediaTablet {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 180px;
+    margin-top: 16px;
+  }
+}
+
+.collection__title {
+  @include mediaTablet {
+    text-align: center;
+  }
 }
 
 .plate {
-    padding-bottom: 50%;
-    position: relative;
-    background-color: $plate;
-    color: $text-accent;
-    background-position: center center;
-    block-size: cover;
-    background-repeat: no-repeat;
+  padding-bottom: 50%;
+  position: relative;
+  background-color: $plate;
+  color: $text-accent;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-    &:nth-child(1) {
-        background-image: url('src/assets/coll1.jpeg');
-    }
+  @include mediaTablet {
+    padding-bottom: 0;
+    background-size: contain;
+  }
 
-    &:nth-child(2) {
-        background-image: url('src/assets/coll2.jpeg');
-    }
+  &:nth-child(1) {
+    background-image: url('src/assets/coll1.jpeg');
+  }
 
-    &:nth-child(3) {
-        background-image: url('src/assets/coll3.jpeg');
-    }
+  &:nth-child(2) {
+    background-image: url('src/assets/coll2.jpeg');
+  }
+
+  &:nth-child(3) {
+    background-image: url('src/assets/coll3.jpeg');
+  }
 }
 
 .plate__content {
-    position: absolute;
-    left: 32px;
-    right: 32px;
-    bottom: 40px;
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  bottom: 40px;
+
+  @include mediaLaptop {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
 }
 
 .plate--tall {
-    grid-row: 1 / 3;
+  grid-row: 1 / 3;
 }
 
 .plate__title {
-    font-size: 34px;
-    font-weight: 500;
-    line-height: 38px;
-    letter-spacing: -0.6px;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: -0.6px;
+
+  @include mediaLaptop {
+    font-size: 28px;
+  }
 }
 
 .plate__link {
-    margin-top: 12px;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-weight: 500;
-    line-height: 28px;
-    letter-spacing: -0.4px;
-    border-bottom: 1px solid $text-accent;
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  border-bottom: 1px solid $text-accent;
+
+  @include mediaLaptop {
+    margin-top: 8px;
+    font-size: 14px;
+  }
 }

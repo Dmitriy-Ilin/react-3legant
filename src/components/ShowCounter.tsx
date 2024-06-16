@@ -5,18 +5,22 @@ type ShowCounter = {
   hours: number;
   minutes: number;
   seconds: number;
-}
+};
 
-const ShowCounter: React.FC<ShowCounter> = ({ days, hours, minutes, seconds }) => {
+const ShowCounter: React.FC<ShowCounter> = ({
+  days,
+  hours,
+  minutes,
+  seconds,
+}) => {
   return (
     <>
-      <DateTimeDisplay value={days} type={'Days'}  />
+      <DateTimeDisplay value={days} type={'Days'} />
       <DateTimeDisplay value={hours} type={'Hours'} />
-      <DateTimeDisplay value={minutes} type={'Mins'}  />
+      <DateTimeDisplay value={minutes} type={'Mins'} />
       <DateTimeDisplay value={seconds} type={'Seconds'} />
     </>
   );
 };
-
 
 export default ShowCounter;

@@ -1,34 +1,59 @@
 .values {
-    padding: 40px 0;
+  padding: 40px 0;
+
+  @include mediaTablet {
+    padding: 32px 0;
+  }
 }
 
 .values__row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
-    gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
+  gap: 24px;
+
+  @include mediaTablet {
+    grid-template-columns: repeat(auto-fit, minmax(151px, 1fr));
+    gap: 24px 8px;
+  }
 }
 
 .value {
-    padding: 48px 32px;
-    background-color: $value-bg;
+  padding: 48px 32px;
+  background-color: $value-bg;
+
+  @include mediaTablet {
+    padding: 32px 16px;
+    padding-right: 8px;
+  }
+}
+
+.value__img {
+  width: 48px;
+  height: 48px;
 }
 
 .value__title {
-    margin-top: 22px;
-    font-family: 'Poppins';
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 28px;
-    letter-spacing: 0px;
-    color: $neutral;
+  margin-top: 22px;
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0px;
+  color: $neutral;
+
+  @include mediaTablet {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .value__desc {
-    margin-top: 8px;
-    font-family: 'Poppins';
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0%;
-    color: $text-logo;
+  margin-top: 8px;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: $text-logo;
 }

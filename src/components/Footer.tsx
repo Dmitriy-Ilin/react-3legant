@@ -35,8 +35,10 @@ const Footer = () => {
         <div className='footer__row footer__row--border'>
           <div className='footer__copyrights'>
             <p>Copyright © 2023 3legant. All rights reserved</p>
-            <a href='!#'>Privacy Policy</a>
-            <a href='!#'>Terms of Use</a>
+            <div>
+              <a href='!#'>Privacy Policy</a>
+              <a href='!#'>Terms of Use</a>
+            </div>
           </div>
           <div className='footer__socials'>
             <a href='!#'>

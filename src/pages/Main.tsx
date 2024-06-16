@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import Navigation from 'src/components/Navigation';
 import Tagline from 'src/components/Tagline';
 import Loading from 'src/components/Loading';
@@ -7,21 +7,32 @@ const Hero = lazy(() => import('src/components/Hero'));
 const Logos = lazy(() => import('src/components/Logos'));
 const Arrivals = lazy(() => import('src/components/Arrivals'));
 const Collection = lazy(() => import('src/components/Collection'));
-const BestSeller = lazy(() => import('src/components/BestSeller')); 
+const BestSeller = lazy(() => import('src/components/BestSeller'));
 const Promotion = lazy(() => import('src/components/Promotion'));
 const Feed = lazy(() => import('src/components/Feed'));
 const Newsletter = lazy(() => import('src/components/Newsletter'));
 const Footer = lazy(() => import('src/components/Footer'));
+const MobileNav = lazy(() => import('src/components/MobileNav'));
 
 const Main = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     document.title = '3legant';
   }, []);
 
   return (
-    <>
+    <div
+      className={`main ${isMenuOpen && 'main--mobile'}`}
+      onClick={() => setIsMenuOpen(false)}
+    >
       <Tagline />
-      <Navigation />
+      <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      {isMenuOpen && (
+        <Suspense fallback={<Loading />}>
+          <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        </Suspense>
+      )}
       <Suspense fallback={<Loading />}>
         <Hero />
       </Suspense>
@@ -52,7 +63,7 @@ const Main = () => {
       <Suspense fallback={<Loading />}>
         <Footer />
       </Suspense>
-    </>
+    </div>
   );
 };
 

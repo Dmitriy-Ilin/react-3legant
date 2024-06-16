@@ -9,23 +9,38 @@ const Values = () => {
       <div className='container'>
         <div className='values__row'>
           <div className='value'>
-            <img className='value__img' src={delivery} alt='delivery' loading='lazy'/>
-            <h4 className='value__title'>Free Shipping</h4>   
+            <img
+              className='value__img'
+              src={delivery}
+              alt='delivery'
+              loading='lazy'
+            />
+            <h4 className='value__title'>Free Shipping</h4>
             <p className='value__desc'>Order above $200</p>
           </div>
           <div className='value'>
-            <img className='value__img' src={cashback} alt='cashback' loading='lazy'/>
-            <h4 className='value__title'>Money-back</h4>   
+            <img
+              className='value__img'
+              src={cashback}
+              alt='cashback'
+              loading='lazy'
+            />
+            <h4 className='value__title'>Money-back</h4>
             <p className='value__desc'>30 days guarantee</p>
           </div>
           <div className='value'>
-            <img className='value__img' src={lock} alt='lock' loading='lazy'/>
-            <h4 className='value__title'>Secure Payments</h4>   
+            <img className='value__img' src={lock} alt='lock' loading='lazy' />
+            <h4 className='value__title'>Secure Payments</h4>
             <p className='value__desc'>Secured by Stripe</p>
           </div>
           <div className='value'>
-            <img className='value__img' src={phone} alt='phone' loading='lazy'/>
-            <h4 className='value__title'>24/7 Support</h4>   
+            <img
+              className='value__img'
+              src={phone}
+              alt='phone'
+              loading='lazy'
+            />
+            <h4 className='value__title'>24/7 Support</h4>
             <p className='value__desc'>Phone and Email support</p>
           </div>
         </div>
